@@ -1,7 +1,15 @@
 {
-  "description": "EarlyStage.in empowers Indian entrepreneurs by providing a comprehensive platform for business registration, legal support, branding, and digital marketing, streamlining the startup journey.",
+  "title": "EarlyStage.in — Launch and Grow Your Business in India",
+  "description": "From company registration to digital marketing — everything Indian businesses need to launch, comply, build, and grow. All in one place.",
+  "language": "en-IN",
   "robots": {
-    "index": false
+    "index": true
+  },
+  "icons": {
+    "icon": "/earlystage-logo.png"
+  },
+  "openGraph": {
+    "image": "/earlystage-logo.png"
   },
   "accessibility": {
     "addBypassLinks": false,

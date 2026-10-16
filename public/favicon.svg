@@ -1,7 +1,23 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="32" height="32" rx="6" fill="#08152E"/>
-<path d="M8 20L10 22L12 18L14 20L16 14L18 18L20 16L22 20L24 14" stroke="#4285F4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 13L16 9L20 13" stroke="#34A853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 9V16" stroke="#34A853" stroke-width="2.5" stroke-linecap="round"/>
-<circle cx="16" cy="9" r="2" fill="#FBBC05"/>
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="6" fill="#0D1D3B"/>
+  
+  <!-- EarlyStage Growth Bar Logo -->
+  <!-- Blue bar (shortest) -->
+  <rect x="4" y="22" width="4" height="6" rx="0.5" fill="#4285F4"/>
+  
+  <!-- Green bar (medium) -->
+  <rect x="9" y="18" width="4" height="10" rx="0.5" fill="#34A853"/>
+  
+  <!-- Red bar (tall) -->
+  <rect x="14" y="14" width="4" height="14" rx="0.5" fill="#EA4335"/>
+  
+  <!-- Yellow bar with arrow (tallest) -->
+  <rect x="19" y="10" width="4" height="18" rx="0.5" fill="#FBBC05"/>
+  
+  <!-- Arrow tip pointing up -->
+  <path d="M21 8 L24 11 L18 11 Z" fill="#FBBC05"/>
+  
+  <!-- Subtle glow effect -->
+  <circle cx="21" cy="8" r="3" fill="#FBBC05" opacity="0.3" filter="blur(2px)"/>
 </svg>

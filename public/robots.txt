@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://earlystage.in/sitemap.xml

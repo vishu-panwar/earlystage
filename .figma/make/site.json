@@ -1,0 +1,10 @@
+{
+  "description": "EarlyStage.in empowers Indian entrepreneurs by providing a comprehensive platform for business registration, legal support, branding, and digital marketing, streamlining the startup journey.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

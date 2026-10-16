@@ -120,7 +120,7 @@ p { margin: 0; }
 .mobile-menu-top > i { color: #f4c83f; font-size: 7px; font-style: normal; letter-spacing: .12em; }
 .mobile-links { flex: 1; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #304564 transparent; }
 .mobile-links > a, .mobile-service-group > button { display: grid; width: 100%; min-height: 61px; grid-template-columns: 35px 1fr 20px; align-items: center; padding: 0; border: 0; border-bottom: 1px solid #22324e; background: transparent; color: #d3dbea; text-align: left; cursor: pointer; }
-.mobile-links > a > span, .mobile-service-group > button > span { color: #57729e; font-size: 8px; }
+.mobile-links > a > span, .mobile-service-group > button > span { color: #57729e; font-size: 14px; font-weight: 600; }
 .mobile-links > a strong, .mobile-service-group > button strong { font-family: var(--heading); font-size: 14px; font-weight: 600; }
 .mobile-links > a > svg, .mobile-service-group > button > svg { color: #667a9a; transition: transform .25s; }
 .mobile-links > a.active { color: var(--white); }

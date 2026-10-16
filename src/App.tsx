@@ -1,4 +1,5 @@
 import { FormEvent, ReactNode, useEffect, useMemo, useState } from "react";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
 
 type IconName =
   | "arrow"
@@ -166,22 +167,23 @@ const faqs = [
 
 function Logo({ light = false }: { light?: boolean }) {
   return (
-    <a className={`logo ${light ? "logo-light" : ""}`} href="/" aria-label="EarlyStage.in home">
+    <Link className={`logo ${light ? "logo-light" : ""}`} to="/" aria-label="EarlyStage.in home">
       <img src="./earlystage-logo.png" alt="" aria-hidden="true" />
       <span>EarlyStage<span>.in</span></span>
-    </a>
+    </Link>
   );
 }
 
 function ButtonLink({ href, children, secondary = false }: { href: string; children: ReactNode; secondary?: boolean }) {
-  return <a className={`btn ${secondary ? "btn-secondary" : ""}`} href={href}>{children}<Icon name="arrow" size={18} /></a>;
+  return <Link className={`btn ${secondary ? "btn-secondary" : ""}`} to={href}>{children}<Icon name="arrow" size={18} /></Link>;
 }
 
 function Header() {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
   const [mobileServices, setMobileServices] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const currentPath = window.location.pathname;
+  const currentPath = location.pathname;
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
@@ -207,26 +209,26 @@ function Header() {
         <div className="nav-links">
           {links.map(([label, href]) => label === "Services" ? (
             <div className="nav-service" key={href}>
-              <a className={currentPath.startsWith("/services") ? "active" : ""} href={href}>Services</a>
+              <Link className={currentPath.startsWith("/services") ? "active" : ""} to={href}>Services</Link>
               <div className="service-menu">
                 <div className="service-menu-head">
                   <div>
                     <span>Explore the ecosystem</span>
                     <strong>Everything your business needs to move forward.</strong>
                   </div>
-                  <a className="menu-all" href="/services">View all services <Icon name="arrow" size={15} /></a>
+                  <Link className="menu-all" to="/services">View all services <Icon name="arrow" size={15} /></Link>
                 </div>
                 <div className="service-menu-body">
                   <div className="service-menu-grid">
                     {services.map(service => (
-                      <a href={`/services/${service.slug}`} key={service.slug}>
+                      <Link to={`/services/${service.slug}`} key={service.slug}>
                         <span className={`menu-service-icon accent-${service.accent}`}><Icon name={service.icon} size={18} /></span>
                         <span>
                           <strong>{service.kicker}</strong>
                           <small>{service.desc}</small>
                         </span>
                         <Icon name="arrow" size={15} />
-                      </a>
+                      </Link>
                     ))}
                   </div>
                   <aside className="menu-roadmap">
@@ -234,14 +236,14 @@ function Header() {
                     <p>Not sure where to begin?</p>
                     <strong>Build your business roadmap.</strong>
                     <small>Select your goals and get a practical set of recommended next steps.</small>
-                    <a href="/solutions">Find my starting point <Icon name="arrow" size={15} /></a>
+                    <Link to="/solutions">Find my starting point <Icon name="arrow" size={15} /></Link>
                   </aside>
                 </div>
               </div>
             </div>
-          ) : <a className={currentPath === href ? "active" : ""} key={href} href={href}>{label}</a>)}
+          ) : <Link className={currentPath === href ? "active" : ""} key={href} to={href}>{label}</Link>)}
         </div>
-        <div className="nav-actions"><a className="login-link" href="/contact">Login</a><a className="nav-cta" href="/contact">Launch Your Business</a></div>
+        <div className="nav-actions"><Link className="login-link" to="/contact">Login</Link><Link className="nav-cta" to="/contact">Launch Your Business</Link></div>
         <button className={`menu-button ${open ? "open" : ""}`} aria-label={open ? "Close menu" : "Open menu"} aria-controls="mobile-navigation" aria-expanded={open} onClick={() => setOpen(!open)}><span /><span /><span /></button>
       </nav>
       <div className={`mobile-nav-layer ${open ? "open" : ""}`} aria-hidden={!open}>
@@ -252,12 +254,12 @@ function Header() {
             {links.map(([label, href], index) => label === "Services" ? <div className={`mobile-service-group ${mobileServices ? "expanded" : ""}`} key={href}>
               <button onClick={() => setMobileServices(!mobileServices)} aria-expanded={mobileServices}><span>0{index + 1}</span><strong>Services</strong><Icon name="plus" size={19} /></button>
               <div className="mobile-service-list">
-                {services.map(service => <a href={`/services/${service.slug}`} tabIndex={open && mobileServices ? 0 : -1} key={service.slug}><Icon name={service.icon} size={16} /><span>{service.kicker}</span><Icon name="arrow" size={14} /></a>)}
-                <a className="mobile-view-all" href="/services" tabIndex={open && mobileServices ? 0 : -1}>View all services <Icon name="arrow" size={14} /></a>
+                {services.map(service => <Link to={`/services/${service.slug}`} tabIndex={open && mobileServices ? 0 : -1} key={service.slug}><Icon name={service.icon} size={16} /><span>{service.kicker}</span><Icon name="arrow" size={14} /></Link>)}
+                <Link className="mobile-view-all" to="/services" tabIndex={open && mobileServices ? 0 : -1}>View all services <Icon name="arrow" size={14} /></Link>
               </div>
-            </div> : <a className={currentPath === href ? "active" : ""} key={href} href={href} tabIndex={open ? 0 : -1}><span>0{index + 1}</span><strong>{label}</strong><Icon name="arrow" size={17} /></a>)}
+            </div> : <Link className={currentPath === href ? "active" : ""} key={href} to={href} tabIndex={open ? 0 : -1}><span>0{index + 1}</span><strong>{label}</strong><Icon name="arrow" size={17} /></Link>)}
           </div>
-          <div className="mobile-menu-foot"><a href="/contact" className="mobile-primary-cta" tabIndex={open ? 0 : -1}>Launch Your Business <Icon name="arrow" size={18} /></a><p><Icon name="check" size={14} /> Built for founders. Designed for growth.</p></div>
+          <div className="mobile-menu-foot"><Link to="/contact" className="mobile-primary-cta" tabIndex={open ? 0 : -1}>Launch Your Business <Icon name="arrow" size={18} /></Link><p><Icon name="check" size={14} /> Built for founders. Designed for growth.</p></div>
         </aside>
       </div>
     </header>
@@ -559,11 +561,41 @@ function StandardPage({ type }: { type: string }) {
 }
 
 export default function App() {
-  const path = window.location.pathname.replace(/\/$/, "") || "/";
-  let page: ReactNode;
-  if (path === "/") page = <HomePage />;
-  else if (path === "/services") page = <><section className="inner-hero simple"><div className="shell"><p className="eyebrow light">The EarlyStage ecosystem</p><h1>Expertise for Every Part of the Build.</h1><p>Explore practical support across business setup, professional services, technology, brand, marketing, and operations.</p></div></section><Services /></>;
-  else if (path.startsWith("/services/")) page = <ServicePage slug={path.split("/").pop() ?? ""} />;
-  else page = <StandardPage type={path.slice(1)} />;
-  return <div className="app"><Header /><main>{page}</main><Footer /></div>;
+  return (
+    <div className="app">
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={
+            <>
+              <section className="inner-hero simple">
+                <div className="shell">
+                  <p className="eyebrow light">The EarlyStage ecosystem</p>
+                  <h1>Expertise for Every Part of the Build.</h1>
+                  <p>Explore practical support across business setup, professional services, technology, brand, marketing, and operations.</p>
+                </div>
+              </section>
+              <Services />
+            </>
+          } />
+          <Route path="/services/:slug" element={<ServicePageWrapper />} />
+          <Route path="/solutions" element={<StandardPage type="solutions" />} />
+          <Route path="/how-it-works" element={<StandardPage type="how-it-works" />} />
+          <Route path="/about" element={<StandardPage type="about" />} />
+          <Route path="/resources" element={<StandardPage type="resources" />} />
+          <Route path="/contact" element={<StandardPage type="contact" />} />
+          <Route path="/privacy-policy" element={<StandardPage type="privacy-policy" />} />
+          <Route path="/terms" element={<StandardPage type="terms" />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+function ServicePageWrapper() {
+  const location = useLocation();
+  const slug = location.pathname.split("/").pop() ?? "";
+  return <ServicePage slug={slug} />;
 }

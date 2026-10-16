@@ -1034,3 +1034,307 @@ footer { padding: 76px 0 25px; background: #050e20; color: var(--white); }
   .enquiry-types > a { min-height: 64px; grid-template-columns: 36px 1fr 16px; }
   .enquiry-types > a > span { width: 36px; height: 36px; }
 }
+
+
+/* ============================================
+   COMPREHENSIVE MOBILE IMPROVEMENTS
+   ============================================ */
+
+@media (max-width: 760px) {
+  /* ===== HERO SECTION IMPROVEMENTS ===== */
+  .hero h1 { 
+    font-size: 42px !important; 
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+  .hero-lede { 
+    font-size: 16px !important; 
+    line-height: 1.6;
+    margin: 24px 0 32px !important;
+  }
+  .eyebrow { 
+    font-size: 11px;
+    margin-bottom: 14px;
+    letter-spacing: 0.12em;
+  }
+  .hero-buttons { 
+    gap: 12px; 
+  }
+  .hero-buttons .btn { 
+    min-height: 54px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  /* ===== HOME SYSTEM SECTION ===== */
+  .home-system-head h2 {
+    font-size: 34px !important;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+  .home-system-head > p {
+    font-size: 16px !important;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+  .system-core h3 {
+    font-size: 22px !important;
+    margin-bottom: 12px;
+  }
+  .system-core > p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .system-node {
+    padding: 20px 18px !important;
+  }
+  .system-node h3 {
+    font-size: 15px !important;
+    margin-bottom: 6px;
+  }
+  .system-node p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  
+  /* ===== CAPABILITY MAP IMPROVEMENTS ===== */
+  .command-count {
+    font-size: 15px !important;
+  }
+  .command-list button {
+    font-size: 13px !important;
+  }
+  .command-list button > span {
+    font-size: 10px !important;
+  }
+  .command-detail h3 {
+    font-size: 32px !important;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .command-detail > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .command-tags span {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+  
+  /* ===== FOUNDER PATHS IMPROVEMENTS ===== */
+  .paths-intro h2 {
+    font-size: 34px !important;
+    line-height: 1.2;
+  }
+  .paths-intro > p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .path-selector button {
+    min-height: 68px;
+    padding: 16px 18px;
+  }
+  .path-selector button > span {
+    font-size: 11px !important;
+  }
+  .path-selector button > strong {
+    font-size: 16px !important;
+  }
+  .path-stage-copy h3 {
+    font-size: 28px !important;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .path-stage-copy > p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .path-needs > div {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+  
+  /* ===== EXECUTION MODEL IMPROVEMENTS ===== */
+  .execution-grid h2 {
+    font-size: 34px !important;
+    line-height: 1.2;
+  }
+  .execution-grid > div:first-child > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .execution-principle {
+    padding: 18px;
+  }
+  .execution-principle > span {
+    font-size: 10px;
+  }
+  .execution-principle h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .execution-principle p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  /* ===== WORKSPACE IMPROVEMENTS ===== */
+  .workspace-heading h2 {
+    font-size: 34px !important;
+  }
+  .workspace-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .workspace-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* ===== CLOSING SECTION IMPROVEMENTS ===== */
+  .home-closing h2 {
+    font-size: 32px !important;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  .home-closing > div > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  
+  /* ===== GENERAL SECTION IMPROVEMENTS ===== */
+  .section-heading h2 {
+    font-size: 34px !important;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .section-lede {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  
+  /* ===== CARD IMPROVEMENTS ===== */
+  .service-card h3 {
+    font-size: 20px !important;
+    line-height: 1.3;
+  }
+  .service-card > p:not(.card-kicker) {
+    font-size: 14px !important;
+    line-height: 1.6;
+  }
+  .card-kicker {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* ===== BUTTON IMPROVEMENTS ===== */
+  .btn {
+    min-height: 52px;
+    font-size: 14px;
+    padding: 0 20px;
+    font-weight: 600;
+  }
+  .text-link {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* ===== COMPARISON SECTION ===== */
+  .compare-card h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .compare-row {
+    font-size: 14px;
+    min-height: 58px;
+  }
+  
+  /* ===== IMPROVE READABILITY ===== */
+  p, li {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  
+  strong {
+    font-weight: 600;
+  }
+  
+  /* ===== TOUCH TARGETS ===== */
+  button, a.btn, .text-link {
+    min-height: 44px; /* iOS minimum touch target */
+  }
+}
+
+@media (max-width: 480px) {
+  /* ===== EXTRA SMALL SCREENS ===== */
+  .hero h1 { 
+    font-size: 36px !important; 
+  }
+  .hero-lede { 
+    font-size: 15px !important; 
+  }
+  
+  .home-system-head h2,
+  .paths-intro h2,
+  .execution-grid h2,
+  .workspace-heading h2,
+  .section-heading h2 {
+    font-size: 30px !important;
+  }
+  
+  .home-closing h2 {
+    font-size: 28px !important;
+  }
+  
+  .command-detail h3 {
+    font-size: 28px !important;
+  }
+  
+  .path-stage-copy h3 {
+    font-size: 24px !important;
+  }
+  
+  .service-card h3 {
+    font-size: 18px !important;
+  }
+  
+  .compare-card h3 {
+    font-size: 22px;
+  }
+  
+  /* Reduce vertical spacing on small screens */
+  .section {
+    padding: 56px 0;
+  }
+  
+  .home-system, .home-command, .home-paths, 
+  .home-execution, .home-workspace, 
+  .home-testimonials, .home-closing {
+    padding: 64px 0 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  /* ===== ULTRA SMALL SCREENS ===== */
+  .hero h1 { 
+    font-size: 32px !important; 
+  }
+  
+  h2 {
+    font-size: 26px !important;
+  }
+  
+  h3 {
+    font-size: 18px !important;
+  }
+  
+  .btn {
+    font-size: 13px;
+    padding: 0 16px;
+  }
+  
+  body {
+    font-size: 15px;
+  }
+}

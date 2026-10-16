@@ -714,7 +714,7 @@ footer { padding: 76px 0 25px; background: #050e20; color: var(--white); }
 }
 
 @media (max-width: 760px) {
-  .shell { width: min(100% - 32px, 1180px); }
+  .shell { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
   .section { padding: 78px 0; }
   h2 { font-size: 37px; }
   .section-heading { margin-bottom: 38px; }
@@ -901,6 +901,12 @@ footer { padding: 76px 0 25px; background: #050e20; color: var(--white); }
     overflow-x: hidden; 
     width: 100%;
     max-width: 100vw;
+    position: relative;
+  }
+  .contact-hero .shell {
+    width: min(1180px, calc(100% - 32px)) !important;
+    padding-left: 0;
+    padding-right: 0;
   }
   .contact-hero::before { display: none; } /* Remove grid overlay that causes overflow */
   .contact-hero-grid { 
@@ -936,6 +942,11 @@ footer { padding: 76px 0 25px; background: #050e20; color: var(--white); }
     padding: 60px 0; 
     overflow-x: hidden;
     width: 100%;
+  }
+  .contact-main .shell {
+    width: min(1180px, calc(100% - 32px)) !important;
+    padding-left: 0;
+    padding-right: 0;
   }
   .contact-main-grid {
     overflow: hidden;
@@ -976,7 +987,7 @@ footer { padding: 76px 0 25px; background: #050e20; color: var(--white); }
 
 @media (max-width: 480px) {
   /* Extra small screens */
-  .shell { width: calc(100% - 24px); max-width: 100%; }
+  .shell { width: min(1180px, calc(100% - 24px)); max-width: 100%; margin-inline: auto; }
   .section { padding: 60px 0; }
   
   h1 { font-size: 32px !important; }
@@ -999,6 +1010,12 @@ footer { padding: 76px 0 25px; background: #050e20; color: var(--white); }
   
   /* Contact page extra small fixes */
   .contact-hero { padding: 100px 0 50px; }
+  .contact-hero .shell {
+    width: min(1180px, calc(100% - 24px)) !important;
+  }
+  .contact-main .shell {
+    width: min(1180px, calc(100% - 24px)) !important;
+  }
   .contact-hero-copy h1 { font-size: 30px !important; }
   .contact-hero-copy > p:not(.eyebrow) { font-size: 14px; margin: 20px 0 24px; }
   .contact-promise { gap: 6px; }

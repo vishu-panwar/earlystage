@@ -184,6 +184,15 @@ function Header() {
   const [mobileServices, setMobileServices] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const currentPath = location.pathname;
+  
+  // Close menu when location changes
+  useEffect(() => {
+    setOpen(false);
+    setMobileServices(false);
+    // Scroll to top on page change
+    window.scrollTo(0, 0);
+  }, [location]);
+  
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();

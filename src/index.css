@@ -848,3 +848,70 @@ footer { padding: 76px 0 25px; background: #050e20; color: var(--white); }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .scene { transform: none !important; }
 }
+
+/* Additional Mobile Fixes */
+@media (max-width: 760px) {
+  /* Ensure body doesn't overflow on mobile */
+  body { overflow-x: hidden; }
+  
+  /* Fix button text wrapping */
+  .btn { white-space: normal; text-align: center; }
+  
+  /* Improve mobile service grid */
+  .service-menu-grid > a { grid-template-columns: 35px 1fr 14px; }
+  .service-menu-grid > a > span:nth-child(2) strong { font-size: 10px; }
+  .service-menu-grid > a > span:nth-child(2) small { font-size: 8px; }
+  
+  /* Mobile table/grid overflow fixes */
+  .comparison, .service-grid, .discovery-grid { overflow-x: auto; }
+  
+  /* Improve text readability on mobile */
+  h1 { line-height: 1.15; word-break: break-word; }
+  h2 { line-height: 1.2; word-break: break-word; }
+  p { word-break: break-word; }
+  
+  /* Fix service cards on mobile */
+  .service-card { padding: 24px 20px; min-height: 340px; }
+  .service-card h3 { min-height: auto; font-size: 20px; }
+  .service-card > p:not(.card-kicker) { min-height: auto; font-size: 13px; }
+  
+  /* Mobile menu improvements */
+  .mobile-menu { width: 100%; }
+  .mobile-links > a strong { font-size: 16px; }
+  
+  /* Fix hero section overflow */
+  .hero-grid { overflow: hidden; }
+  .hero-logo-wrap { width: 100%; }
+  
+  /* Improve discovery/goal section */
+  .goal-grid button { padding: 12px; font-size: 12px; }
+  .roadmap-panel { padding: 20px; }
+  
+  /* Fix footer on mobile */
+  .footer-links { padding-inline: 0; }
+  .footer-links li { margin-bottom: 8px; }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .shell { width: calc(100% - 24px); }
+  .section { padding: 60px 0; }
+  
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 28px !important; }
+  h3 { font-size: 20px; }
+  
+  .hero { padding-top: 110px; min-height: auto; }
+  .hero-lede { font-size: 15px; margin: 20px 0 24px; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
+  
+  .service-card { padding: 20px 16px; }
+  .tag-row span { font-size: 9px; padding: 4px 6px; }
+  
+  .btn { min-height: 48px; font-size: 13px; padding: 0 16px; }
+  
+  .nav { height: 64px; }
+  .logo { font-size: 16px; }
+  .logo > img { width: 28px; height: 28px; }
+}

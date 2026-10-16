@@ -167,7 +167,7 @@ const faqs = [
 function Logo({ light = false }: { light?: boolean }) {
   return (
     <a className={`logo ${light ? "logo-light" : ""}`} href="/" aria-label="EarlyStage.in home">
-      <img src="/earlystage-logo.png" alt="" aria-hidden="true" />
+      <img src="./earlystage-logo.png" alt="" aria-hidden="true" />
       <span>EarlyStage<span>.in</span></span>
     </a>
   );
@@ -275,7 +275,7 @@ function HeroVisual() {
       <div className="hero-logo-orbit orbit-inner" />
       <div className="hero-logo-stage" style={{ transform: `rotateX(${tilt.y}deg) rotateY(${tilt.x}deg)` }}>
         <div className="hero-logo-glow" />
-        <img src="/earlystage-logo.png" alt="EarlyStage.in upward growth logo" fetchPriority="high" />
+        <img src="./earlystage-logo.png" alt="EarlyStage.in upward growth logo" fetchPriority="high" />
       </div>
     </div>
   );
@@ -483,7 +483,7 @@ function HomeTestimonials() {
 }
 
 function HomeClosing() {
-  return <section className="home-closing"><div className="shell home-closing-grid"><div className="closing-logo-visual"><div className="closing-logo-orbit"><i /><i /><i /></div><img src="/earlystage-logo.png" alt="EarlyStage.in upward growth logo" /><span>IDEA</span><strong>TAKE OFF</strong></div><div><p className="eyebrow light">Move with more clarity</p><h2>Your Business Does Not Need More Noise. It Needs a Next Step.</h2><p>Share the business context, the challenge in front of you, and what progress would look like. We&apos;ll help identify a responsible place to begin.</p><div><ButtonLink href="/contact">Start a Business Conversation</ButtonLink><ButtonLink href="/services" secondary>Explore the Ecosystem</ButtonLink></div><small>No guaranteed approvals, funding, rankings, leads, sales, or commercial outcomes.</small></div></div></section>;
+  return <section className="home-closing"><div className="shell home-closing-grid"><div className="closing-logo-visual"><div className="closing-logo-orbit"><i /><i /><i /></div><img src="./earlystage-logo.png" alt="EarlyStage.in upward growth logo" /><span>IDEA</span><strong>TAKE OFF</strong></div><div><p className="eyebrow light">Move with more clarity</p><h2>Your Business Does Not Need More Noise. It Needs a Next Step.</h2><p>Share the business context, the challenge in front of you, and what progress would look like. We&apos;ll help identify a responsible place to begin.</p><div><ButtonLink href="/contact">Start a Business Conversation</ButtonLink><ButtonLink href="/services" secondary>Explore the Ecosystem</ButtonLink></div><small>No guaranteed approvals, funding, rankings, leads, sales, or commercial outcomes.</small></div></div></section>;
 }
 
 function HomePage() {

@@ -1,23 +1,4 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Dark background -->
-  <rect width="32" height="32" rx="6" fill="#0D1D3B"/>
-  
-  <!-- EarlyStage Growth Bar Logo -->
-  <!-- Blue bar (shortest) -->
-  <rect x="4" y="22" width="4" height="6" rx="0.5" fill="#4285F4"/>
-  
-  <!-- Green bar (medium) -->
-  <rect x="9" y="18" width="4" height="10" rx="0.5" fill="#34A853"/>
-  
-  <!-- Red bar (tall) -->
-  <rect x="14" y="14" width="4" height="14" rx="0.5" fill="#EA4335"/>
-  
-  <!-- Yellow bar with arrow (tallest) -->
-  <rect x="19" y="10" width="4" height="18" rx="0.5" fill="#FBBC05"/>
-  
-  <!-- Arrow tip pointing up -->
-  <path d="M21 8 L24 11 L18 11 Z" fill="#FBBC05"/>
-  
-  <!-- Subtle glow effect -->
-  <circle cx="21" cy="8" r="3" fill="#FBBC05" opacity="0.3" filter="blur(2px)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 1254 1254">
+  <title>Logo favicon</title>
+  <g><path d="M 770,197 L 426,198 L 392,205 L 352,221 L 325,237 L 301,256 L 272,286 L 249,319 L 233,352 L 222,394 L 220,409 L 220,718 L 227,688 L 244,650 L 265,619 L 292,591 L 320,570 L 352,553 L 387,541 L 419,534 L 419,421 L 428,406 L 442,399 L 574,399 L 579,368 L 593,331 L 611,300 L 631,275 L 663,245 L 691,226 L 726,209 Z" fill="#117CFC"/><path d="M 712,1068 L 700,1067 L 669,1058 L 645,1047 L 621,1032 L 584,998 L 556,958 L 546,936 L 538,910 L 534,883 L 534,860 L 543,814 L 561,774 L 266,1068 Z" fill="#FDBD04"/><path d="M 1032,197 L 793,197 L 761,202 L 736,209 L 689,231 L 645,265 L 616,299 L 590,346 L 580,378 L 577,398 L 881,361 L 898,361 L 832,703 L 863,699 L 896,689 L 929,673 L 955,655 L 980,631 L 999,607 L 1023,559 L 1031,525 L 1033,506 Z" fill="#FDBD04"/><path d="M 639,535 L 438,535 L 398,540 L 365,550 L 332,565 L 301,586 L 276,609 L 260,628 L 242,657 L 227,695 L 220,725 L 220,955 Z" fill="#16AB53"/><path d="M 738,596 L 564,771 L 545,812 L 536,850 L 536,892 L 542,921 L 560,963 L 589,1002 L 623,1032 L 664,1055 L 696,1065 L 724,1069 L 833,1069 L 878,1061 L 911,1048 L 938,1032 L 959,1015 L 981,992 L 999,967 L 1015,935 L 1023,909 L 1027,876 L 716,876 L 686,870 L 663,856 L 651,844 L 640,826 L 635,807 L 635,788 L 642,763 L 648,752 L 665,732 L 686,717 L 719,705 L 733,703 L 828,702 Z" fill="#F13228"/></g>
 </svg>
